@@ -1,0 +1,28 @@
+	Basic tutorials
+https://webglfundamentals.org/
+https://learnopengl.com/Introduction
+https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+
+	Matric operation library - glMatrix
+http://glmatrix.net/docs/index.html  //Documentation
+https://github.com/toji/gl-matrix
+http://math.hws.edu/graphicsbook/c7/s1.html#webgl3d.1.2
+
+ 	3-D objects basics 
+https://webglfundamentals.org/webgl/lessons/webgl-3d-orthographic.html  //Depth buffer ...
+https://learnopengl.com/Advanced-OpenGL/Depth-testing
+
+	Basic cube code
+https://github.com/mdn/webgl-examples/blob/gh-pages/tutorial/sample5/webgl-demo.js    //static cube 
+https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL   //textured cube	
+
+	Perspective and camera matrices
+https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html
+https://webglfundamentals.org/webgl/lessons/webgl-3d-camera.html	
+https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection 
+
+
+
+
+
+

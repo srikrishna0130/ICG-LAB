@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<!------------------------------------------------- -->
+    
+    <body style="margin-left: 20px;">
+        <h3>BOX INSIDE A BOX</h3>
+        <canvas id="my_canvas1" width="500" height="220"></canvas>
+    </body>
+
+    <script type="text/javascript">
+
+    	var canvas = document.getElementById("my_canvas1");
+    	var conxt = canvas.getContext('2d');
+
+    	conxt.fillStyle = 'rgb(0,0,200)'
+    	conxt.fillRect(20,20,150,180);
+    	conxt.fillStyle = 'rgb(0,200,0)'
+    	conxt.fillRect(30,30,130,160);
+    	conxt.fillStyle = 'rgb(200,0,0)'
+    	conxt.fillRect(40,40,110,140);
+    	conxt.fillStyle = 'rgb(200,200,200)'
+    	conxt.fillRect(50,50,90,120);
+
+    </script>
+
+<!-- --------------------------------------------- -->
+    
+    <body>
+    	<h3>INTERSECTING RECTANGLES</h3>
+    	<canvas id="my_canvas2" width="500" height="250"></canvas>
+    </body>
+   
+    <script type="text/javascript">
+
+    	var canvas = document.getElementById("my_canvas2");
+    	var conxt = canvas.getContext('2d');
+    	
+    	conxt.globalCompositeOperation = 'lighter';
+
+    	conxt.fillStyle = 'rgba(0,0,255)'
+    	conxt.fillRect(20,20,150,180);
+    	conxt.fillStyle = 'rgba(0,255,0)'
+    	conxt.fillRect(80,120,180,120);
+    	conxt.fillStyle = 'rgba(255,0,0)'
+    	conxt.fillRect(130,40,110,140);
+
+    </script>
+
+
+<!------------------------------------------------- -->
+
+     <body>
+    	<h3>CIRCLES</h3>
+    	<canvas id="my_canvas3" width="500" height="250"></canvas>
+    </body>
+   
+    <script type="text/javascript">
+
+    	var canvas = document.getElementById("my_canvas3");
+    	var conxt = canvas.getContext('2d');
+
+    	var xPos = 20;
+    	var yPos = 20;
+    	var minRadius = 5;
+    	var maxRadius = 20;
+    	var numCircles = 50;
+    	
+	for(var n=0; n<numCircles; n++)
+   		{
+
+	      var xPos       =  Math.random()*canvas.width;
+	      var yPos       =  Math.random()*canvas.height;
+	      var radius     =  minRadius+(Math.random()*(maxRadius-minRadius));
+	      var colorIndex =  Math.random()*(255);
+	      colorIndex     =  Math.round(colorIndex);
+	      var color      =  Number(colorIndex).toString(16);
+	      var HEX = '#'+color+color+color;
+	      
+	      conxt.beginPath();
+	      conxt.fillStyle = HEX;
+	      conxt.arc(xPos, yPos, radius,0, Math.PI * 2,true);
+	   	  conxt.fill();
+	   }
+
+    </script>   
+
+<!-- -------------------------------------------- -->
+
+     <body>
+    	<h3>SMILEY</h3>
+    	<canvas id="my_canvas4" width="500" height="250"></canvas>
+    </body>
+   
+    <script type="text/javascript">
+
+    	var canvas = document.getElementById("my_canvas4");
+    	var conxt = canvas.getContext('2d');
+
+    	conxt.beginPath();
+    	conxt.fillStyle = "rgb(255,255,0)";
+    	conxt.arc(150,80,70,0,Math.PI *2,true);
+    	conxt.fill();
+
+    	conxt.beginPath();
+    	conxt.fillStyle = "rgb(255,0,0)";
+    	conxt.arc(120,55,10,0,Math.PI * 2,true);
+    	conxt.fill();
+
+    	conxt.beginPath();
+    	conxt.fillStyle = "rgb(255,0,0)";
+    	conxt.arc(180,55,10,0,Math.PI * 2,true);
+    	conxt.fill();
+
+    	conxt.fillStyle = "rgb(0,0,0)";
+    	conxt.moveTo(150,180)
+	   	conxt.beginPath();
+    	conxt.arc(150,80,30,0,Math.PI ,0);
+    	conxt.lineWidth = 3;
+    	conxt.stroke();
+
+    	conxt.fillStyle = "rgb(255,0,0)";
+	   	conxt.beginPath();
+    	conxt.arc(120,80,3,0,Math.PI*2 ,0);
+    	conxt.fill();
+
+    	conxt.fillStyle = "rgb(255,0,0)";
+	   	conxt.beginPath();
+    	conxt.arc(180,80,3,0,Math.PI*2 ,0);
+    	conxt.fill();
+
+    </script>   
+</html>
